@@ -15,7 +15,12 @@ As a user, I see a form where I can create a new blog post.
 As a user, I can click a button that will take me from the home page to a page where I can create a blog post.
 As a user, I can navigate from the form back to the home page.
 As a user, I can click a button that will submit my blog post to the database.
+
+
 As a user, I when I submit my post, I am redirected to the home page.
+
+
+
 Stretch Challenges
 As a user, I can delete my blog post.
 As a user, I can update my blog post.

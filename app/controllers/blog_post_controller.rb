@@ -9,7 +9,15 @@ class BlogPostController < ApplicationController
          @blog_post = BlogPost.new
     end
     def create
-        @blog_post = BlogPost.create(title:params[:title], content:params[:content])
+        @blog_post = BlogPost.create(blog_post_params)
+        if @blog_post.valid?
+            redirect_to blog_posts
+        else 
+            redirect_to new_blog_post
+        end
     end
-    
+    private
+    def blog_post_params
+        params.require(:blog_post).permit(:title, :content)
+    end
 end
