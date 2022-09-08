@@ -11,9 +11,9 @@ class BlogPostController < ApplicationController
     def create
         @blog_post = BlogPost.create(blog_post_params)
         if @blog_post.valid?
-            redirect_to blog_posts
+            redirect_to blog_posts_path
         else 
-            redirect_to new_blog_post
+            redirect_to new_blog_post_path
         end
     end
     private
