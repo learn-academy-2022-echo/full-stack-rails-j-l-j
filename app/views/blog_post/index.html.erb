@@ -1,0 +1,9 @@
+
+<ul> 
+<% @blog_post.map do |value| %>
+    
+    <li><%= link_to "#{value.title}", blog_post_path(value) %><li>
+   
+<% end %>
+</ul> 
+<%= link_to 'Create a new blog post', new_blog_post_path   %>
